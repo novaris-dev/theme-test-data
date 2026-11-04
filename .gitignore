@@ -1,0 +1,3 @@
+# Resized images that Novaris writes next to the originals, such as
+# landscape-896x504.jpg, when a site reads this folder through NOVARIS_USER_PATH.
+/media/*-[0-9]*x[0-9]*.*

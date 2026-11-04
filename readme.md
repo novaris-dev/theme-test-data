@@ -13,7 +13,21 @@ content/   → user/content
 media/     → user/media
 ```
 
-To test a theme, copy both into a **copy** of the site (never your real content), then run `novaris export` or open the site in a browser:
+### With `NOVARIS_USER_PATH` (Novaris Framework 1.0.7 or newer)
+
+Clone this repository next to the site, then add one line to the site's `.env`:
+
+```
+NOVARIS_USER_PATH=../theme-test-data
+```
+
+The site now reads its content and media from this folder instead of `user/`, so `novaris export` (or `npm run dev` in a theme) builds the test content. Remove the line to go back to the site's own content. Nothing is copied, and the site's `user/` folder is not touched.
+
+Resized images are written into `media/` next to the originals; `.gitignore` keeps them out of commits.
+
+### By copying the files
+
+With older versions of the framework, copy both folders into a **copy** of the site (never your real content), then run `novaris export` or open the site in a browser:
 
 ```bash
 rm -rf user/content user/media
