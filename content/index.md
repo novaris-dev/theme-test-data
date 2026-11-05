@@ -6,4 +6,5 @@ This is the home page of the Novaris theme test data. Every post and page in thi
 - [Blog](/blog)
 - [Categories](/category)
 - [Markdown reference](/blog/2025/06/01/markdown-reference)
+- [Gallery](/blog/2025/06/10/gallery), [Gallery: Captions, Links and Mixed Shapes](/blog/2025/06/12/gallery-captions-and-links), [Gallery: Columns and Edge Cases](/blog/2025/06/14/gallery-columns) and the [Gallery Page](/gallery)
 - [About](/about)

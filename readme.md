@@ -64,6 +64,9 @@ Run the export first. It should finish without errors or PHP warnings, and every
 | Post | Tests |
 |------|-------|
 | Markdown Reference | Every Markdown element: headings 1–6, emphasis, strikethrough, links, nested lists, task lists, blockquotes, code blocks, tables (including a very wide one), definition lists, images, footnotes, horizontal rules, attributes and raw HTML. A `<script>` tag that should be escaped |
+| Gallery | Six images in three columns, so every row is full |
+| Gallery: Captions, Links and Mixed Shapes | Seven images of different shapes with captions, so the last row has one image, plus a gallery of images that link to the full-size file |
+| Gallery: Columns and Edge Cases | Two- and four-column galleries, a one-image gallery, a gallery with a missing image, and images smaller than a column |
 | Long title | A title long enough to wrap in lists, on the post, and in the document title |
 | No title | No `title` in the front matter. Headings and links to it should not be empty |
 | Special characters | Quotes, `<Tags>`, `&`, accents, emoji and symbols in the title. They should show as written and not turn into HTML |
@@ -84,7 +87,7 @@ Run the export first. It should finish without errors or PHP warnings, and every
 | Same Day: First Post, Second Post | Two posts on the same day, for the day archive |
 | Archive Post 1–6, The Oldest Post | Posts from 2022 to 2024, so there are year and month archives and the blog needs several pages |
 
-There are 33 posts in all (32 visible), so a blog showing 10 posts per page has four pages.
+There are 37 posts in all (36 visible), so a blog showing 10 posts per page has four pages.
 
 ### Categories
 
@@ -92,6 +95,7 @@ There are 33 posts in all (32 visible), so a blog showing 10 posts per page has 
 |----------|-------|
 | General | Used by most posts, so its archive has several pages |
 | One Post | Exactly one post |
+| Gallery | The gallery posts |
 | Empty Category, No Description | No posts. Their archives, and links to them, should still work |
 | A Category With a Remarkably Long Name… | A name long enough to wrap |
 | Uncategorized, Category 1–8 | Fill out the many-categories post and the category list |
@@ -103,12 +107,29 @@ There are 33 posts in all (32 visible), so a blog showing 10 posts per page has 
 | Home (`index.md`) | The home page, with links into the test content |
 | About | An ordinary page |
 | Empty Page | A page with a title and no content |
+| Gallery Page | A captioned gallery on a page, which often uses a wider template than posts |
 | Page Without Title | A page with content and no title |
 | Parent Page → Child Page → Grandchild Page | Nested pages, the deepest one as a single file rather than a folder |
 
+### Galleries
+
+Novaris has no gallery shortcode or block. A gallery is a `div` with a `gallery` class and a `gallery-columns-{n}` class, with one image per line and a blank line between them:
+
+```markdown
+<div class="gallery gallery-columns-3">
+
+![First image](/user/media/gallery-01.jpg "Optional caption")
+
+![Second image](/user/media/gallery-02.jpg)
+
+</div>
+```
+
+Each image becomes a `<figure>`, with its title as the `<figcaption>`. A theme styles `.gallery` and the column classes it supports, usually as a grid. These posts check two, three and four columns.
+
 ### Media
 
-`landscape.jpg`, `portrait.jpg`, `wide.jpg`, `square.jpg` and `small.jpg`. Each is labeled with its name and size so it's easy to spot when a theme crops or scales it.
+`landscape.jpg`, `portrait.jpg`, `wide.jpg`, `square.jpg` and `small.jpg`, plus `gallery-01.jpg` to `gallery-09.jpg` in landscape, portrait, square and wide shapes. Each is labeled with its number or name and its size, so it's easy to spot when a theme crops or scales it.
 
 ## Adding test cases
 
