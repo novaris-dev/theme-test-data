@@ -70,6 +70,8 @@ Run the export first. It should finish without errors or PHP warnings, and every
 | Embeds: YouTube and Vimeo | YouTube links (watch, short link with a start time, Shorts), a Vimeo link, and two videos in a row. Needs `supports.embeds` (Novaris Framework 1.1.3 or newer) |
 | Embeds: Video and Audio Files | Players for `video.mp4` and `audio.mp3`, and a link to a missing video |
 | Embeds: What Stays a Link | Video links in a sentence, with their own text, and to a channel page, a non-video link on its own line, and a raw `<iframe>` |
+| Post Format: Aside, Status, Quote, Link, Image, Gallery, Video, Audio, Chat | One post for each post format (`format:` in the front matter). Needs `supports.post-formats` (Novaris Framework 1.1.5 or newer); themes that don't support a format show it as a standard post |
+| Post Format: Unknown | `format: banana`, which isn't a post format, so it should look standard |
 | Long title | A title long enough to wrap in lists, on the post, and in the document title |
 | No title | No `title` in the front matter. Headings and links to it should not be empty |
 | Special characters | Quotes, `<Tags>`, `&`, accents, emoji and symbols in the title. They should show as written and not turn into HTML |
@@ -90,7 +92,7 @@ Run the export first. It should finish without errors or PHP warnings, and every
 | Same Day: First Post, Second Post | Two posts on the same day, for the day archive |
 | Archive Post 1–6, The Oldest Post | Posts from 2022 to 2024, so there are year and month archives and the blog needs several pages |
 
-There are 40 posts in all (39 visible), so a blog showing 10 posts per page has four pages.
+There are 50 posts in all (49 visible), so a blog showing 10 posts per page has five pages.
 
 ### Categories
 
@@ -100,6 +102,7 @@ There are 40 posts in all (39 visible), so a blog showing 10 posts per page has 
 | One Post | Exactly one post |
 | Gallery | The gallery posts |
 | Embeds | The embed posts |
+| Post Formats | The post format posts |
 | Empty Category, No Description | No posts. Their archives, and links to them, should still work |
 | A Category With a Remarkably Long Name… | A name long enough to wrap |
 | Uncategorized, Category 1–8 | Fill out the many-categories post and the category list |
