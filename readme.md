@@ -67,6 +67,9 @@ Run the export first. It should finish without errors or PHP warnings, and every
 | Gallery | Six images in three columns, so every row is full |
 | Gallery: Captions, Links and Mixed Shapes | Seven images of different shapes with captions, so the last row has one image, plus a gallery of images that link to the full-size file |
 | Gallery: Columns and Edge Cases | Two- and four-column galleries, a one-image gallery, a gallery with a missing image, and images smaller than a column |
+| Embeds: YouTube and Vimeo | YouTube links (watch, short link with a start time, Shorts), a Vimeo link, and two videos in a row. Needs `supports.embeds` (Novaris Framework 1.1.3 or newer) |
+| Embeds: Video and Audio Files | Players for `video.mp4` and `audio.mp3`, and a link to a missing video |
+| Embeds: What Stays a Link | Video links in a sentence, with their own text, and to a channel page, a non-video link on its own line, and a raw `<iframe>` |
 | Long title | A title long enough to wrap in lists, on the post, and in the document title |
 | No title | No `title` in the front matter. Headings and links to it should not be empty |
 | Special characters | Quotes, `<Tags>`, `&`, accents, emoji and symbols in the title. They should show as written and not turn into HTML |
@@ -87,7 +90,7 @@ Run the export first. It should finish without errors or PHP warnings, and every
 | Same Day: First Post, Second Post | Two posts on the same day, for the day archive |
 | Archive Post 1–6, The Oldest Post | Posts from 2022 to 2024, so there are year and month archives and the blog needs several pages |
 
-There are 37 posts in all (36 visible), so a blog showing 10 posts per page has four pages.
+There are 40 posts in all (39 visible), so a blog showing 10 posts per page has four pages.
 
 ### Categories
 
@@ -96,6 +99,7 @@ There are 37 posts in all (36 visible), so a blog showing 10 posts per page has 
 | General | Used by most posts, so its archive has several pages |
 | One Post | Exactly one post |
 | Gallery | The gallery posts |
+| Embeds | The embed posts |
 | Empty Category, No Description | No posts. Their archives, and links to them, should still work |
 | A Category With a Remarkably Long Name… | A name long enough to wrap |
 | Uncategorized, Category 1–8 | Fill out the many-categories post and the category list |
@@ -129,7 +133,7 @@ Each image becomes a `<figure>`, with its title as the `<figcaption>`. A theme s
 
 ### Media
 
-`landscape.jpg`, `portrait.jpg`, `wide.jpg`, `square.jpg` and `small.jpg`, plus `gallery-01.jpg` to `gallery-09.jpg` in landscape, portrait, square and wide shapes. Each is labeled with its number or name and its size, so it's easy to spot when a theme crops or scales it.
+`landscape.jpg`, `portrait.jpg`, `wide.jpg`, `square.jpg` and `small.jpg`, plus `gallery-01.jpg` to `gallery-09.jpg` in landscape, portrait, square and wide shapes, and a 4-second `video.mp4` (about 100 KB) and `audio.mp3` for the embed posts. Each is labeled with its number or name and its size, so it's easy to spot when a theme crops or scales it.
 
 ## Adding test cases
 
