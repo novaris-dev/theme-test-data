@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Embed test content: three posts covering YouTube and Vimeo links, video and audio files (with a small `video.mp4` and `audio.mp3`), and links that should stay links, plus an Embeds category.
 - Gallery test content: three gallery posts (full rows; captions, links and mixed shapes; two and four columns, one image, a missing image and small images), a gallery page, a Gallery category and nine gallery images. The readme explains the gallery markup.
 - 34 posts covering titles, thumbnails, every Markdown element, long words and URLs, categories, authors, non-Latin and right-to-left text, excerpts, hidden posts and date archives.
 - 14 categories, including one with many posts, one with exactly one, empty ones and one with a long name.
